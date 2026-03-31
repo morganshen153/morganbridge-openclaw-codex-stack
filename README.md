@@ -2,73 +2,58 @@
 
 Community bridge/plugin stack for OpenClaw and Codex-compatible workflows.
 
-MorganBridge Stack is a third-party integration bundle for handing work from an OpenClaw-side plugin into a connected Codex session through MorganBridge. It packages the current public release in one repository with the runtime, plugin, skill, and supporting documentation kept together.
+MorganBridge Stack is a third-party integration bundle for people who want a cleaner way to carry work from OpenClaw into a Codex-compatible workflow without rebuilding everything from scratch. This repository is the current public release of that bundle.
 
 This project is maintained independently by `morganshen153`. It is not affiliated with, endorsed by, sponsored by, or certified by OpenAI or the OpenClaw project. References to OpenClaw and Codex are used for compatibility and discoverability only.
 
-## What Is Included
+## Why People Use It
 
-- [`morganbridge-openclaw-plugin/`](./morganbridge-openclaw-plugin)  
-  OpenClaw-side launcher plugin that invokes MorganBridge and returns results into the originating conversation.
-- [`morganbridge-receiver-skill/`](./morganbridge-receiver-skill)  
-  Codex-side receiver skill that keeps handoff responses compact, continuous, and task-focused.
-- [`morganbridge-runtime-source/`](./morganbridge-runtime-source)  
-  Extracted source-side runtime tree prepared for Apache-2.0 publication.
-- [`morganbridge-runtime/`](./morganbridge-runtime)  
-  Bundled runtime payload currently kept as a distribution artifact while public provenance and rebuild boundaries are being tightened.
+- move work forward instead of re-explaining the same task across tools
+- keep longer, multi-step sessions feeling more continuous
+- use a ready public bundle instead of assembling separate pieces by hand
+- start from a community-maintained compatibility layer that is easy to inspect and evaluate
 
-## Component Relationship
+## Good Fit
 
-```mermaid
-flowchart LR
-  U["User request in OpenClaw"] --> P["morganbridge-openclaw-plugin<br/>OpenClaw-side launcher"]
-  P --> B["morganbridge-runtime<br/>Bundled runtime payload"]
-  P -. "bundled copy today" .-> PB["morganbridge-openclaw-plugin/bridge<br/>Embedded runtime copy"]
-  RS["morganbridge-runtime-source<br/>Source-side runtime tree"] -. "future clean rebuild path" .-> B
-  B --> C["Connected Codex session"]
-  C --> S["morganbridge-receiver-skill<br/>Receiver-side behavior"]
-  S --> R["Returned result"]
-```
+- coding-heavy sessions that do not fit neatly in one round
+- handoff-oriented workflows between OpenClaw and Codex-compatible tooling
+- users who want a packaged public release instead of a build-it-yourself starting point
+- evaluation, experimentation, and practical day-to-day workflow support
 
-Today, the stack is published as one umbrella repository. This repository is the current public release channel for the MorganBridge bundle.
+## What This Repository Provides
 
-## Quick Start
+This repository is the current public bundle release. It keeps the public-facing docs, packaged materials, and compatibility assets together in one place so you can evaluate the project without chasing multiple repos.
 
-1. Copy [`morganbridge-openclaw-plugin/`](./morganbridge-openclaw-plugin) into `%USERPROFILE%\.openclaw\extensions\morganbridge-openclaw-plugin\`.
-2. If your Codex setup supports local skills, place [`morganbridge-receiver-skill/`](./morganbridge-receiver-skill) in your local skills directory.
-3. Review the component installation guides before redistribution or customization:
-   - [`morganbridge-openclaw-plugin/Installation-Guide.md`](./morganbridge-openclaw-plugin/Installation-Guide.md)
-   - [`morganbridge-receiver-skill/Installation-Guide.md`](./morganbridge-receiver-skill/Installation-Guide.md)
-4. Treat [`morganbridge-runtime-source/`](./morganbridge-runtime-source) as the source-side reference point, and treat bundled runtime binaries as a separate release boundary until the public build path is fully documented.
+If you want to explore or use the current public release:
 
-## Why This Repository Exists
+- start with the bundle in this repository
+- review the included install guides before customization or redistribution
+- use the boundary documents if you need licensing or packaging clarity
 
-This repository is the umbrella entry point for the full stack. It gives users one place to:
+Primary user-facing guides:
 
-- discover the project through OpenClaw, Codex, plugin, skill, and bridge search terms
-- understand how the plugin, skill, and runtime pieces fit together
-- review naming, release-boundary, and licensing notes before reuse
-- start from the current public bundle with the release boundary already documented
+- [`morganbridge-openclaw-plugin/Installation-Guide.md`](./morganbridge-openclaw-plugin/Installation-Guide.md)
+- [`morganbridge-receiver-skill/Installation-Guide.md`](./morganbridge-receiver-skill/Installation-Guide.md)
 
-## Current Public Scope
+## Project Positioning
 
-This repository is the public release you should use. It intentionally keeps the current bundle together instead of publishing separate standalone component repositories.
+MorganBridge Stack is published as a single public release bundle. That means the project stays easy to discover, evaluate, and use without turning the landing page into a technical map of internal implementation details.
 
-Use this repo when you want:
+This is the right repository if you want:
 
-- the current published bundle
-- the documented release boundary in one place
-- the runtime, plugin, skill, and docs to stay aligned in a single public release
+- the current public MorganBridge release
+- one place to review the project before trying it
+- bundled documentation and release-boundary notes together
+
+## Public Notes
+
+- this is an independent community project
+- compatibility references are descriptive, not claims of affiliation
+- the repository is intended to be useful to evaluators and users, not to overexpose internal design details on the landing page
 
 ## Release Boundary
 
-- Apache-2.0-ready material:
-  - [`morganbridge-openclaw-plugin/`](./morganbridge-openclaw-plugin)
-  - [`morganbridge-receiver-skill/`](./morganbridge-receiver-skill)
-  - [`morganbridge-runtime-source/`](./morganbridge-runtime-source)
-- Pending binary/provenance review:
-  - [`morganbridge-runtime/`](./morganbridge-runtime)
-  - [`morganbridge-openclaw-plugin/bridge/`](./morganbridge-openclaw-plugin/bridge)
+The public release contains both Apache-2.0-ready material and bundled runtime distribution material. If you need exact licensing or packaging boundaries, review the linked documents below before reuse or redistribution.
 
 See these files for release and compliance details:
 
