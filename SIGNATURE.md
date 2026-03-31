@@ -1,3 +1,0 @@
-# Signature
-
-`morganshen153`

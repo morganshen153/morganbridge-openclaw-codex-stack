@@ -26,12 +26,13 @@ This repository is the current public bundle release. It keeps the public-facing
 
 If you want to explore or use the current public release:
 
-- start with the bundle in this repository
+- start with [`QUICKSTART.md`](./QUICKSTART.md)
 - review the included install guides before customization or redistribution
 - use the boundary documents if you need licensing or packaging clarity
 
 Primary user-facing guides:
 
+- [`QUICKSTART.md`](./QUICKSTART.md)
 - [`morganbridge-openclaw-plugin/Installation-Guide.md`](./morganbridge-openclaw-plugin/Installation-Guide.md)
 - [`morganbridge-receiver-skill/Installation-Guide.md`](./morganbridge-receiver-skill/Installation-Guide.md)
 
@@ -62,6 +63,11 @@ See these files for release and compliance details:
 - [`THIRD_PARTY_NOTICES.md`](./THIRD_PARTY_NOTICES.md)
 - [`OPEN_SOURCE_RISK_REVIEW.md`](./OPEN_SOURCE_RISK_REVIEW.md)
 - [`PROJECT_NAMING.md`](./PROJECT_NAMING.md)
+
+For GitHub presentation copy:
+
+- [`GITHUB_ABOUT_COPY.md`](./GITHUB_ABOUT_COPY.md)
+- [`REPO_COVER_COPY.md`](./REPO_COVER_COPY.md)
 
 ## License
 

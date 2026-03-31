@@ -1,52 +1,36 @@
 # Open Source Risk Review
 
-This is an engineering risk review, not legal advice.
+This is a public engineering note, not legal advice.
 
-## High Risk
+## Main Release Considerations
 
-### Bundled third-party binaries need provenance and license review
+- this repository contains both Apache-2.0-ready material and bundled runtime distribution material
+- bundled runtime files should not be described as fully open-source source code
+- redistribution should follow the boundary and notice documents included in this repository
 
-- `morganbridge-runtime/` ships `MorganBridge.exe`, Python runtime files, OpenSSL DLLs, and other binary dependencies.
-- `morganbridge-openclaw-plugin/bridge/` contains a second copy of the same runtime bundle.
-- Do not publish these bundles under a blanket Apache-2.0 claim until you document which files are yours and which are third-party redistributions.
+## Runtime Bundles
 
-### Public renaming is incomplete without a bridge rebuild
+The current public bundle includes runtime distribution material in these locations:
 
-- String scans still show legacy names and local-runtime traces inside `morganbridge-runtime/MorganBridge.exe`.
-- The duplicate binary under `morganbridge-openclaw-plugin/bridge/MorganBridge.exe` shows the same legacy strings.
-- Without source code or a rebuild process, the public-facing rename cannot fully remove old branding from the binary payload.
+- `morganbridge-runtime/`
+- `morganbridge-openclaw-plugin/bridge/`
 
-### Runtime source exists, but the public build path is not yet verified
+These paths should be treated as bundled runtime material inside the public release, not as a blanket Apache-2.0 source claim.
 
-- `morganbridge-runtime-source/` now contains extracted runtime source and build inputs.
-- The bundled runtime binary should still be described as a binary distribution until you rebuild and validate it from the public source tree.
+## Public Communication Guidance
 
-## Medium Risk
+- describe the repository as a public bundle release
+- describe compatibility references as descriptive only
+- avoid implying official affiliation with OpenClaw, Codex, or OpenAI
+- point users to the boundary documents if they need packaging or license detail
 
-### Plugin code previously exposed machine-specific defaults
+## Recommended Supporting Files
 
-- `morganbridge-openclaw-plugin/index.js` used to hardcode `C:/Users/Administrator/...`, `E:/codex`, and a specific npm shim path.
-- This file has been rewritten to prefer environment variables and runtime defaults instead.
+- [`LICENSE_SCOPE.md`](./LICENSE_SCOPE.md)
+- [`SOURCE_BOUNDARY.md`](./SOURCE_BOUNDARY.md)
+- [`THIRD_PARTY_NOTICES.md`](./THIRD_PARTY_NOTICES.md)
+- [`NOTICE`](./NOTICE)
 
-### Docs previously exposed a user-specific install path
+## Practical Rule
 
-- The OpenClaw plugin docs used a fixed `C:\Users\Administrator\...` path.
-- The docs now use `%USERPROFILE%` so the published instructions are portable.
-
-### No top-level release license set yet
-
-- If you intend to release under Apache-2.0, add `LICENSE` at the project roots you actually own.
-- Add `THIRD_PARTY_NOTICES.md` or equivalent before publishing any bundled runtimes.
-
-## Low Risk
-
-### Current public naming is now lower risk
-
-- Public names now place `MorganBridge` first and treat `OpenClaw` and `Codex` as compatibility terms, not as primary branding.
-
-## Recommended Next Steps
-
-1. Separate your original code from bundled third-party binaries.
-2. Add `LICENSE`, `NOTICE` if needed, and `THIRD_PARTY_NOTICES.md`.
-3. Decide whether `MorganBridge.exe` will be open source, source-available, or binary-only.
-4. Rebuild the bridge from source before claiming the rename is complete.
+Use this repository as the current public bundle release, and treat the bundled runtime material as separately bounded distribution content.
