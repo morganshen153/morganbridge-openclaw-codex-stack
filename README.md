@@ -2,7 +2,7 @@
 
 Community bridge/plugin stack for OpenClaw and Codex-compatible workflows.
 
-MorganBridge Stack is a third-party integration bundle for handing work from an OpenClaw-side plugin into a connected Codex session through MorganBridge. It packages the current working pieces of the stack in one public entry repository while the components are being cleaned up for more focused publication.
+MorganBridge Stack is a third-party integration bundle for handing work from an OpenClaw-side plugin into a connected Codex session through MorganBridge. It packages the current public release in one repository with the runtime, plugin, skill, and supporting documentation kept together.
 
 This project is maintained independently by `morganshen153`. It is not affiliated with, endorsed by, sponsored by, or certified by OpenAI or the OpenClaw project. References to OpenClaw and Codex are used for compatibility and discoverability only.
 
@@ -30,7 +30,7 @@ flowchart LR
   S --> R["Returned result"]
 ```
 
-Today, the stack is published as one umbrella repository. The long-term cleaner shape is to keep the plugin, receiver skill, and runtime source in their own repositories while leaving this repo as the overview and integration entry point.
+Today, the stack is published as one umbrella repository. This repository is the current public release channel for the MorganBridge bundle.
 
 ## Quick Start
 
@@ -48,26 +48,17 @@ This repository is the umbrella entry point for the full stack. It gives users o
 - discover the project through OpenClaw, Codex, plugin, skill, and bridge search terms
 - understand how the plugin, skill, and runtime pieces fit together
 - review naming, release-boundary, and licensing notes before reuse
-- start from a working bundle before the components are split into narrower public repos
+- start from the current public bundle with the release boundary already documented
 
-## Why A Multi-Repo Split May Follow
+## Current Public Scope
 
-Keeping everything in one repository is convenient for discovery, but splitting the stack into multiple public repos later has practical advantages:
+This repository is the public release you should use. It intentionally keeps the current bundle together instead of publishing separate standalone component repositories.
 
-- clearer license and provenance boundaries between source code and bundled runtime artifacts
-- lower legal and release risk because runtime binaries can be isolated or delayed without blocking source publication
-- smaller, more focused repositories for users who only need the plugin or only need the receiver skill
-- independent issues, releases, and versioning for each component
-- better long-term search fit because plugin, skill, and runtime repos can each carry their own description, topics, and documentation
+Use this repo when you want:
 
-The most natural future split is:
-
-- `morganbridge-openclaw-plugin`
-- `morganbridge-receiver-skill`
-- `morganbridge-runtime-source`
-- this umbrella repo as the overview, relationship map, and integration entry point
-
-The current split plan and publish checklist live in [`REPO_SPLIT_PLAN.md`](./REPO_SPLIT_PLAN.md).
+- the current published bundle
+- the documented release boundary in one place
+- the runtime, plugin, skill, and docs to stay aligned in a single public release
 
 ## Release Boundary
 
