@@ -17,6 +17,21 @@ This project is maintained independently by `morganshen153`. It is not affiliate
 - [`morganbridge-runtime/`](./morganbridge-runtime)  
   Bundled runtime payload currently kept as a distribution artifact while public provenance and rebuild boundaries are being tightened.
 
+## Component Relationship
+
+```mermaid
+flowchart LR
+  U["User request in OpenClaw"] --> P["morganbridge-openclaw-plugin<br/>OpenClaw-side launcher"]
+  P --> B["morganbridge-runtime<br/>Bundled runtime payload"]
+  P -. "bundled copy today" .-> PB["morganbridge-openclaw-plugin/bridge<br/>Embedded runtime copy"]
+  RS["morganbridge-runtime-source<br/>Source-side runtime tree"] -. "future clean rebuild path" .-> B
+  B --> C["Connected Codex session"]
+  C --> S["morganbridge-receiver-skill<br/>Receiver-side behavior"]
+  S --> R["Returned result"]
+```
+
+Today, the stack is published as one umbrella repository. The long-term cleaner shape is to keep the plugin, receiver skill, and runtime source in their own repositories while leaving this repo as the overview and integration entry point.
+
 ## Quick Start
 
 1. Copy [`morganbridge-openclaw-plugin/`](./morganbridge-openclaw-plugin) into `%USERPROFILE%\.openclaw\extensions\morganbridge-openclaw-plugin\`.
@@ -51,6 +66,8 @@ The most natural future split is:
 - `morganbridge-receiver-skill`
 - `morganbridge-runtime-source`
 - this umbrella repo as the overview, relationship map, and integration entry point
+
+The current split plan and publish checklist live in [`REPO_SPLIT_PLAN.md`](./REPO_SPLIT_PLAN.md).
 
 ## Release Boundary
 
