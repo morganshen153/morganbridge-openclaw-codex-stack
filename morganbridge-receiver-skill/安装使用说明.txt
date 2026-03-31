@@ -2,37 +2,34 @@
 
 ## 这是什么
 
-`morganbridge-receiver-skill` 是配合 MorganBridge 使用的第三方 Codex skill。
+`morganbridge-receiver-skill` 是一个配合 MorganBridge 使用的第三方 Codex skill。
 
-它的作用是：
-- 让 Codex 知道这是 MorganBridge 转过来的任务
-- 让回复保持连续、简洁、可继续
-- 减少跑题和重开新话题的情况
+它的作用是让任务在交接之后继续得更自然、更简洁，也更适合多轮延续。
 
-## 安装方式
+## 如何安装
 
-如果你的 Codex 环境支持本地 skills，就把整个文件夹放到你使用的 skills 目录下，并保持目录名为：
+如果你的 Codex 环境支持本地 skills，就把整个文件夹放到你正在使用的 skills 目录下，并保持目录名称为：
 
 `morganbridge-receiver-skill`
 
-如果你当前只是使用已经封装好的桥接包，也可以把它当作接收侧行为说明保留。
+如果你主要使用的是已经打包好的公开 bundle，也可以把它当作接收侧行为说明保留。
 
-## 怎么使用
+## 什么时候适合用
 
-它通常不是用户手动点开的东西，而是配合桥接使用：
+适合下面这类场景：
 
-1. OpenClaw 把任务交出去
-2. Codex 收到来自 OpenClaw 的任务
-3. `morganbridge-receiver-skill` 让 Codex 用更适合桥接协作的方式继续回复
+- 希望任务接续更顺一点
+- 希望回复更短、更直接
+- 希望减少多轮过程中跑偏或重复解释
 
-## 它带来的变化
+## 预期效果
 
-安装后，Codex 更适合做到：
-- 延续同一件事
-- 保持短而准
-- 卡住时给出窄检查点
-- 在多轮里不轻易跑偏
+安装后，兼容 Codex 的接续过程通常会更稳定，尤其适合 coding 和连续推进的任务。
 
-## 一句话理解
+## 公开说明
 
-`morganbridge-receiver-skill` 决定的是 Codex 接手之后“怎么继续说、怎么继续做”。`
+这是一个独立社区项目。文档中提到 OpenClaw 和 Codex，仅用于说明兼容关系，不代表官方关联。
+
+## 一句话概括
+
+`morganbridge-receiver-skill` 用来让兼容 Codex 的接续过程更短、更稳、更适合持续推进。

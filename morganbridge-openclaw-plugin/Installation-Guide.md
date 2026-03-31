@@ -2,12 +2,9 @@
 
 ## What It Is
 
-`morganbridge-openclaw-plugin` is a third-party OpenClaw plugin.
+`morganbridge-openclaw-plugin` is a third-party OpenClaw plugin for users who want a smoother handoff from OpenClaw into a Codex-compatible workflow.
 
-It is responsible for:
-- giving OpenClaw a real path to hand work to MorganBridge
-- calling `MorganBridge.exe`
-- returning the result back into the current conversation
+It is meant to make multi-step work feel more continuous, more practical, and less repetitive across tools.
 
 ## Where To Install It
 
@@ -25,24 +22,28 @@ Do not copy only one file. Keep the folder structure intact.
 
 ## How To Use It
 
-After installation, this plugin should be involved when the user says things like:
+Use it when you want OpenClaw-side work to continue in a Codex-compatible flow with less repeated setup.
+
+Common prompts include:
+
 - "hand this to Codex"
 - "continue this with Codex"
 - "let Codex do it"
 
 ## Expected Result
 
-When it works correctly:
-- OpenClaw stops being only descriptive
-- the task is actually handed over
-- the Codex result comes back into the chat
+When the flow is set up correctly, work should feel more continuous and easier to carry forward across multiple rounds.
 
 ## Best Use Cases
 
 - coding tasks
-- multi-step execution tasks
-- multi-round continuation tasks
+- multi-step workflows
+- longer sessions that benefit from cleaner continuation
+
+## Public Note
+
+This is an independent community plugin. References to OpenClaw and Codex describe compatibility only.
 
 ## One-Line Summary
 
-`morganbridge-openclaw-plugin` is the OpenClaw-side launcher that makes the bridge actually fire.`
+`morganbridge-openclaw-plugin` helps OpenClaw-side work continue more smoothly in a Codex-compatible workflow.

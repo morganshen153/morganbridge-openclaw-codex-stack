@@ -4,10 +4,7 @@
 
 `morganbridge-receiver-skill` is a third-party Codex skill used with MorganBridge.
 
-Its role is to:
-- tell Codex that the task came from a MorganBridge handoff
-- keep replies continuous, compact, and usable
-- reduce unnecessary reframing or drifting
+Its purpose is to help continuation feel cleaner, more direct, and more stable after a handoff.
 
 ## How To Install
 
@@ -21,11 +18,7 @@ If you mainly use the packaged bridge flow, you can also keep this as the receiv
 
 It is usually not something a user launches manually.
 
-The normal pattern is:
-
-1. OpenClaw hands work over
-2. Codex receives an OpenClaw-originated task
-3. `morganbridge-receiver-skill` helps Codex continue in the right style
+It works best as part of a handoff-oriented workflow where the goal is to keep progress moving instead of repeatedly reframing the same task.
 
 ## What It Improves
 
@@ -35,6 +28,16 @@ With this skill in place, Codex is more likely to:
 - stop at a narrow checkpoint when blocked
 - remain stable across multiple rounds
 
+## Good Fit
+
+- coding sessions with several follow-up turns
+- tasks that benefit from compact continuation
+- workflows where you want less drift and less repetition
+
+## Public Note
+
+This is an independent community skill. References to OpenClaw and Codex describe compatibility only.
+
 ## One-Line Summary
 
-`morganbridge-receiver-skill` shapes how Codex continues after a MorganBridge handoff.`
+`morganbridge-receiver-skill` helps Codex continue handed work in a shorter, steadier, more usable style.

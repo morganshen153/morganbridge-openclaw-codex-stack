@@ -2,47 +2,40 @@
 
 ## 这是什么
 
-`morganbridge-openclaw-plugin` 是第三方 OpenClaw 插件。
+`morganbridge-openclaw-plugin` 是一个第三方 OpenClaw 插件。
 
-它的作用是：
-- 在 OpenClaw 里提供“把任务交给 MorganBridge”的实际入口
-- 调用 `MorganBridge.exe`
-- 把结果带回当前对话
+它适合希望把工作更顺畅地延续到兼容 Codex 的工作流中的用户，尤其适合多轮、连续推进的任务。
 
 ## 安装位置
 
-建议把整个文件夹复制到：
+将整个文件夹复制到：
 
 `%USERPROFILE%\.openclaw\extensions\morganbridge-openclaw-plugin\`
 
-不要只拷单个文件，保持整个目录结构完整。
+不要只复制单个文件，保持目录结构完整。
 
-## 安装后要做什么
+## 安装后做什么
 
-1. 确认插件目录完整存在
+1. 确认插件目录已经放好
 2. 重启 OpenClaw
-3. 重新打开聊天或新开一个会话
+3. 重新打开聊天，或新建一个会话
 
-## 怎么使用
+## 什么时候适合用
 
-安装后，用户在 OpenClaw 里表达类似意思时，就应该由它参与工作：
-- “把这个交给 Codex”
-- “用 Codex 继续这个任务”
-- “让 Codex 来做”
+适合下面这类场景：
 
-## 成功效果
+- 希望把当前任务继续交给兼容 Codex 的流程
+- 不想在不同工具之间重复解释同一件事
+- 需要持续推进的 coding 或多步骤任务
 
-正常情况下，你会看到：
-- OpenClaw 不再只是口头说“可以交给 Codex”
-- 而是能真正把任务发出去
-- 并把 Codex 的结果拿回来
+## 预期效果
 
-## 适合的使用场景
+当整体流程配置正常时，任务会更容易连续推进，多轮使用时也会更顺手。
 
-- coding 任务
-- 持续处理型任务
-- 需要多轮延续的任务
+## 公开说明
 
-## 一句话理解
+这是一个独立社区项目。文档中提到 OpenClaw 和 Codex，仅用于说明兼容关系，不代表官方关联。
 
-`morganbridge-openclaw-plugin` 是 OpenClaw 端真正把桥接动作发起来的那一层。`
+## 一句话概括
+
+`morganbridge-openclaw-plugin` 用来让 OpenClaw 侧的任务更顺畅地继续到兼容 Codex 的工作流中。
