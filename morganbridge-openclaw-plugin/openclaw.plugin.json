@@ -1,0 +1,23 @@
+{
+  "id": "morganbridge-openclaw-plugin",
+  "name": "MorganBridge OpenClaw Plugin",
+  "description": "Third-party OpenClaw plugin that routes tasks through MorganBridge to a connected Codex session.",
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "bridgeExe": {
+        "type": "string"
+      },
+      "hubBaseUrl": {
+        "type": "string"
+      },
+      "acpxCmd": {
+        "type": "string"
+      },
+      "defaultCwd": {
+        "type": "string"
+      }
+    }
+  }
+}

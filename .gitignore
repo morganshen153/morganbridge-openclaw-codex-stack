@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+*.pyo
+*.log
+*.tmp
+*.temp
+.env
+.env.*
+.DS_Store
+Thumbs.db
+desktop.ini
+node_modules/
+.pytest_cache/
+coverage/
+dist/

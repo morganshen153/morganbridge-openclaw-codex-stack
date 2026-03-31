@@ -1,0 +1,14 @@
+MorganBridge Stack
+Copyright 2026 morganshen153
+
+This repository contains third-party integration assets for OpenClaw and Codex compatibility.
+
+MorganBridge Stack is maintained independently. It is not affiliated with, endorsed by,
+sponsored by, or certified by OpenAI or the OpenClaw project.
+
+Unless otherwise noted, original source files and documentation in this repository are
+provided under the Apache License, Version 2.0.
+
+Bundled runtime binaries under `morganbridge-runtime/` and
+`morganbridge-openclaw-plugin/bridge/` are not relicensed by this NOTICE. See
+`LICENSE_SCOPE.md`, `THIRD_PARTY_NOTICES.md`, and `SOURCE_BOUNDARY.md`.

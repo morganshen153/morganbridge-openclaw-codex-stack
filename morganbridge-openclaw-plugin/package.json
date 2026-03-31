@@ -1,0 +1,12 @@
+{
+  "name": "morganbridge-openclaw-plugin",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Third-party OpenClaw plugin that routes tasks through MorganBridge to a connected Codex session.",
+  "openclaw": {
+    "extensions": [
+      "./index.js"
+    ]
+  }
+}
